@@ -16,13 +16,25 @@ export class TourProduct extends Base {
   @OneToMany(() => TourHoliday, (tourHoliday) => tourHoliday.tourProduct, {
     nullable: true,
   })
-  tourHolidays: TourHoliday[];
+  tourHolidays?: TourHoliday[];
 
   @OneToMany(() => Tour, (tour) => tour.tourProduct, {
     nullable: true,
   })
-  tour: Tour[];
+  tour?: Tour[];
 
   @ManyToOne(() => Partner, (partner) => partner.tourProducts)
   partner: Partner;
+
+  static of(
+    title: string,
+    description: string,
+    tourHolidays: TourHoliday[]
+  ): TourProduct {
+    const tourProduct = new TourProduct();
+    tourProduct.title = title;
+    tourProduct.description = description;
+    tourProduct.tourHolidays = tourHolidays;
+    return tourProduct;
+  }
 }

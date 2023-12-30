@@ -6,11 +6,18 @@ import { TourProduct } from "../../tour-product/entity/tour-product.entity";
 @Entity()
 export class TourHoliday extends Base {
   @Column({ nullable: true })
-  date: Date;
+  date?: Date;
 
   @Column({ type: "int", nullable: true })
-  dayOfWeek: number;
+  dayOfWeek?: number;
 
   @ManyToOne(() => TourProduct, (tourProduct) => tourProduct.tourHolidays)
   tourProduct: TourProduct;
+
+  static of(date?: Date, dayOfWeek?: number): TourHoliday {
+    const tourHoliday = new TourHoliday();
+    tourHoliday.date = date;
+    tourHoliday.dayOfWeek = dayOfWeek;
+    return tourHoliday;
+  }
 }
