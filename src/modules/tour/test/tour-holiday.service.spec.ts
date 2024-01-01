@@ -1,6 +1,6 @@
 import { TestingModule, Test } from "@nestjs/testing";
 import { TourHolidayService } from "../tour-holiday.service";
-import { TourProduct } from "../../tour-product/entity/tour-product.entity";
+import { TourProduct } from "../entity/tour-product.entity";
 import { TourHoliday } from "../entity/tour-holiday.entity";
 
 describe("TourHolidayService", () => {

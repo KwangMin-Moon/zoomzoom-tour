@@ -9,7 +9,7 @@ import {
   GetAvaliableTourDateParams,
 } from "./type/tour-holiday.type";
 import { TourHoliday } from "./entity/tour-holiday.entity";
-import { DateUtils } from "../../../utils/date-utils";
+import { DateUtils } from "../../utils/date-utils";
 import { TourHolidayRepository } from "./repository/tour-holiday.repository";
 
 @Injectable()

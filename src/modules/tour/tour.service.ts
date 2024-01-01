@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
-import { TourHolidayService } from "./tour-holiday/tour-holiday.service";
+import { TourHolidayService } from "./tour-holiday.service";
 import { HolidayRequestDto } from "./dto/HolidayRequestDto";
-import { TourProductService } from "./tour-product/tour-product.service";
+import { TourProductService } from "./tour-product.service";
 import { ReservationRequestDto } from "./dto/ReservationRequestDto";
 import { ReservationService } from "../reservation/reservation.service";
 import { TourRepository } from "./repository/tour.repository";

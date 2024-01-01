@@ -1,9 +1,9 @@
 import { Column, Entity, ManyToOne, OneToMany } from "typeorm";
 
-import { Base } from "../../../../common/entity/base.entity";
-import { TourHoliday } from "../../tour-holiday/entity/tour-holiday.entity";
-import { Tour } from "../../entity/tour.entity";
-import { Partner } from "../../../partner/entity/partner.entity";
+import { Base } from "../../../common/entity/base.entity";
+import { TourHoliday } from "./tour-holiday.entity";
+import { Tour } from "./tour.entity";
+import { Partner } from "../../partner/entity/partner.entity";
 
 @Entity()
 export class TourProduct extends Base {

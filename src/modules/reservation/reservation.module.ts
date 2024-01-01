@@ -1,6 +1,6 @@
 import { Module } from "@nestjs/common";
 import { ReservationService } from "./reservation.service";
-import { ReservationPolicyService } from "./reservation-policy/reservation-policy.service";
+import { ReservationPolicyService } from "./reservation-policy.service";
 import { ReservationRepository } from "./repository/reservation.repository";
 
 @Module({

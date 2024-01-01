@@ -1,4 +1,4 @@
-import { TourProduct } from "../../tour-product/entity/tour-product.entity";
+import { TourProduct } from "../entity/tour-product.entity";
 import { TourHoliday } from "../entity/tour-holiday.entity";
 
 export type GetAvaliableTourDateParams = {
