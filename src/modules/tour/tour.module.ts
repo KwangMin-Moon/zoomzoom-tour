@@ -7,12 +7,14 @@ import { TourProductService } from "./tour-product/tour-product.service";
 import { TourHolidayService } from "./tour-holiday/tour-holiday.service";
 import { TourHolidayRepository } from "./tour-holiday/repository/tour-holiday.repository";
 import { TourProductRepository } from "./tour-product/repository/tour-product.repository";
+import { TourRepository } from "./repository/tour.repository";
 
 @Module({
   imports: [ReservationModule],
   controllers: [TourController],
   providers: [
     TourService,
+    TourRepository,
     TourHolidayService,
     TourHolidayRepository,
     TourProductService,
